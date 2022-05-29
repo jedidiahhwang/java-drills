@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -40,8 +42,16 @@ public class Main {
         if(itemCost < 5 && isRecommendedItem) System.out.println("I will order this.");
         if(drinkCost < 1 || drinkSize > 24) System.out.println("I shall add this to my order.");
 
-        fizzBuzz100switch();
+//        fizzBuzz100switch();
+//        greeting("Jeddy");
+//        System.out.println(add(1, 2));
+//        System.out.println(faveColorFinder("red"));
+//        System.out.println(thatsOdd(6));
+//        int[] values = {100, 101, 1};
+//        System.out.println(Arrays.toString(values));
+//        System.out.println(Arrays.toString(bigOrSmall(values)));
     }
+
 
     // STEP 4
     /*
@@ -92,5 +102,50 @@ public class Main {
                     break;
             }
         }
+    }
+
+    // STEP 5
+    public static void helloWorld() {
+        System.out.println("Hello, World!");
+    }
+
+    public static void greeting(String name) {
+        String formattedGreeting = String.format("Hello, %s", name);
+        System.out.println(formattedGreeting);
+    }
+
+    public static int add(int num1, int num2) {
+        return num1 + num2;
+    }
+
+    public static String faveColorFinder(String color) {
+        switch(color) {
+            case "red":
+                return "red is a great color";
+            case "green":
+                return "green is a solid favorite color";
+            case "black":
+                return "so trendy";
+            default:
+                return "you need to evaluate your favorite color choice";
+        }
+    }
+
+    public static String thatsOdd(int num) {
+        if(num % 2 == 0) return "That's not odd!";
+        else return "That's odd indeed!";
+    }
+
+    public static String[] bigOrSmall(int[] arr) {
+        String[] answers = new String[arr.length];
+        for(int i = 0; i < arr.length; i++) {
+            if(arr[i] > 100) {
+                answers[i] = "big";
+            } else {
+                answers[i] = "small";
+            }
+        }
+
+        return answers;
     }
 }
